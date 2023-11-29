@@ -1,0 +1,79 @@
+O algoritmo consiste em localizar o valor em uma lista ordenada.
+
+Primeiro, determinamos o menor valor da lista e o maior, supondo que temos uma lista iniciada em 1 e terminada em 30 e 
+buscamos o numero 13.
+Baixo = 1
+Alto = 30
+
+0----------------------------30
+1#
+Enquanto o valor baixo for menor ou igual o valor alto, ocorre a iteração.
+
+Determinamos o meio dessa lista, que éo numero 15.
+1-------------15--------------30
+Meio = 15
+
+E determinamos o valor que vamos testar, que é o numero 15.
+Chute = 15
+
+Testamos se e o valor que procuramos, como nao e, vamos a um novo teste.
+
+Testamos se o valor chutado é maior ou menor que o valor buscado.
+No nosso caso 15 (chute) é maior que 13 (buscado).
+
+Entāo determinamos agora, que o valor alto para a nossa busca é o meio da lista, menos 1, no caso o valor 14.
+Agora temos
+Baixo = 1
+Alto = 14
+
+Eliminamos todos os valores a partir do 15 na lista e o nosso valor alto passa a ser o valor do chute - 1.
+1------------14
+
+2#
+Como o valor baixo (1) ainda é menor que o valor alto da lista (14), fazemos uma nova iteração.
+Determinamos novamente o meio da lista (7) (baixo + alto /2)
+
+1-----7------14
+Nosso chute passa a ser o numero 7. Vamos testar
+
+Chute e igual ao que buscamos? Nao.
+Entao, fazemos um novo teste.
+
+Chute(4) é maior que busca(13).
+Nāo.
+Entāo vamos ao else que é.
+
+Eliminar todos os valores menores que 7 da lista e atribuindo o valor baixo como o meio da lista + 1.
+Ficando assim.
+Baixo = 8
+Alto = 14
+
+8-----14
+
+3#
+Vamos para uma nova iteração ja que nosso valor baixo ainda e menor que o valor alto.
+Entao pegamos o novo meio que e 11, pois 8 + 14 = 22, dividido por 2 e 11.
+
+8--11--14
+
+Atribuimos o chute como 11.
+
+E o valor que buscamos? Nao.
+Novo teste.
+
+Chute(11) e maior que busca(13)
+Nao.
+Entao vamos eliminar de 11 para baixo na lista e atribuir o valor baixo como o meio da lista + 1.
+Ficando assim
+Baixo = 12
+Alto = 14
+
+12-14
+4#
+E vamos iterar novamente ja que Baixo e menor ou igual a alto.
+
+Vamos determinar o meio da lista, que e nossa conta de 12 + 14 = 26 / 2 = 13
+
+12 13 14
+O valor do teste(13) e igual ao que buscamos? SIM!!!
+Entao chega ao fim nosso algoritmo com 4 itteracoes para localizar o valor.
